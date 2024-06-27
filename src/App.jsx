@@ -1,5 +1,3 @@
-import "./style.css";
-
 const LoadGovMetric = ({ account }) => {
   return (
     <div class="feedback-wrapper">
