@@ -1,5 +1,5 @@
 const LoadGovMetric = ({ account }) => {
-  // Attach the stylesheet to the head
+  //Attach the stylesheet to the head
   const styleSheet = document.createElement("link");
   styleSheet.rel = "stylesheet";
   styleSheet.href =
@@ -19,9 +19,9 @@ const LoadGovMetric = ({ account }) => {
             href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=3"
           >
             <img
-              class="page-rating-smiley"
+              class="page-rating-smiley page-rating-smiley-good"
               alt="green smiley face"
-              src="/smiley-dark-green.svg?1.13.5"
+              src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-green.svg"
             />
             Good
           </a>
@@ -38,7 +38,7 @@ const LoadGovMetric = ({ account }) => {
             <img
               class="page-rating-smiley"
               alt="green orange face"
-              src="/smiley-orange.svg?1.13.5"
+              src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-orange.svg"
             />
             Average
           </a>
@@ -55,7 +55,7 @@ const LoadGovMetric = ({ account }) => {
             <img
               class="page-rating-smiley"
               alt="green red face"
-              src="/smiley-dark-red.svg?1.13.5"
+              src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-red.svg"
             />
             Poor
           </a>
