@@ -9,6 +9,7 @@ li.page-rating {
   border: 1px solid #eee;
   border-radius: 6px;
   text-align: center;
+  background: #fff;
 }
 a.list__link.gm_sidebar_anchor {
   align-items: center;
