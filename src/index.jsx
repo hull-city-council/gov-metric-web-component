@@ -1,6 +1,6 @@
 import r2wc from "@r2wc/react-to-web-component";
-import CollectionDays from "./App";
+import LoadGovMetric from "./App";
 
-const binCollections = r2wc(CollectionDays, { props: { uprn: "string" } });
+const govMetricRating = r2wc(LoadGovMetric, { props: { account: "string" } });
 
-customElements.define("upcoming-bin-collections", binCollections);
+customElements.define("gov-metric-rating", govMetricRating);

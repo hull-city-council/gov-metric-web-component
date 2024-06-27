@@ -1,87 +1,63 @@
-import React from "react";
-import { DataGrid } from "@mui/x-data-grid";
-import Badge from "@mui/joy/Badge";
-import Avatar from "@mui/joy/Avatar";
-import Typography from "@mui/joy/Typography";
-import { Box, LinearProgress, Stack } from "@mui/material";
-import useFetch from "react-fetch-hook";
-import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import "./style.css";
 
-const CollectionDays = ({ uprn }) => {
-  const { isLoading, data } = useFetch(
-    `https://www.hullcc.gov.uk/api/property/bindate2/${uprn}`,
-  );
-
-  const rows = [];
-  data?.map((item, index) =>
-    rows.push({
-      id: index,
-      type: item.collection_type,
-      date: new Date(item.next_collection_date).toLocaleDateString("en-GB", {
-        weekday: "long",
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      }),
-    }),
-  );
-
+const LoadGovMetric = ({ account }) => {
   return (
-    <Box sx={{ height: 400, width: "100%" }} boxShadow={3}>
-      <DataGrid
-        pageSizeOptions={[0]}
-        sx={{
-          ".MuiDataGrid-columnHeaderTitle": {
-            fontWeight: "bold !important",
-            overflow: "visible !important",
-          },
-        }}
-        rows={rows}
-        columns={[
-          {
-            field: "type",
-            headerClassName: "super-app-theme--header",
-            headerName: "Bin Colour",
-            minWidth: 100,
-            flex: 1,
-            renderCell: (params) => {
-              const blue = params.value === "Blue Bin";
-              const black = params.value === "Black Bin";
-              const brown = params.value === "Brown Bin";
-              const green = params.value === "GreenCaddy";
-              return (
-                <>
-                  <Stack direction="row" alignItems="center" spacing={1}>
-                    <Avatar
-                      variant="soft"
-                      color={
-                        blue
-                          ? "primary"
-                          : black
-                            ? "neutral"
-                            : brown
-                              ? "warning"
-                              : green
-                                ? "success"
-                                : "default"
-                      }
-                    >
-                      <DeleteOutlineIcon />
-                    </Avatar>
-                    <Typography level="body-md">{params.value}</Typography>
-                  </Stack>
-                </>
-              );
-            },
-          },
-          { field: "date", headerName: "Date", minWidth: 100, flex: 1 },
-        ]}
-        slots={{
-          loadingOverlay: LinearProgress,
-        }}
-        loading={isLoading}
-      />
-    </Box>
+    <div class="feedback-wrapper">
+      <h2 class="site-footer__text">How would you rate this page?</h2>
+      <ul class="list list--inline">
+        <li class="list__item page-rating">
+          <a
+            class="list__link gm_sidebar_anchor"
+            title="rate this page as good"
+            role="button"
+            target="_blank"
+            rel="nofollow"
+            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=3"
+          >
+            <img
+              class="page-rating-smiley"
+              alt="green smiley face"
+              src="/smiley-dark-green.svg?1.13.5"
+            />
+            Good
+          </a>
+        </li>
+        <li class="list__item page-rating">
+          <a
+            class="list__link gm_sidebar_anchor"
+            title="rate this page as average"
+            role="button"
+            target="_blank"
+            rel="nofollow"
+            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=2"
+          >
+            <img
+              class="page-rating-smiley"
+              alt="green orange face"
+              src="/smiley-orange.svg?1.13.5"
+            />
+            Average
+          </a>
+        </li>
+        <li class="list__item page-rating">
+          <a
+            class="list__link gm_sidebar_anchor"
+            title="rate this page as poor"
+            role="button"
+            target="_blank"
+            rel="nofollow"
+            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=4"
+          >
+            <img
+              class="page-rating-smiley"
+              alt="green red face"
+              src="/smiley-dark-red.svg?1.13.5"
+            />
+            Poor
+          </a>
+        </li>
+      </ul>
+    </div>
   );
 };
-export default CollectionDays;
+export default LoadGovMetric;
