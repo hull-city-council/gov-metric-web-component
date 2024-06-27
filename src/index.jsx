@@ -3,4 +3,4 @@ import LoadGovMetric from "./App";
 
 const govMetricRating = r2wc(LoadGovMetric, { props: { account: "string" } });
 customElements.define("gov-metric-rating", govMetricRating);
-document.body.prepend(document.querySelector("gov-metric-rating"));
+document.body.append(document.querySelector("gov-metric-rating"));
