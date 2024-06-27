@@ -15,6 +15,7 @@ a.list__link.gm_sidebar_anchor {
   display: flex;
   flex-direction: column;
   min-width: 70px;
+  background: #fff;
 }
 .page-rating-smiley {
   padding-bottom: 0.5rem;

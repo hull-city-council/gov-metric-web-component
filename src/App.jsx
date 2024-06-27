@@ -1,10 +1,17 @@
 const LoadGovMetric = ({ account }) => {
-  //Attach the stylesheet to the head
+  // Attach the stylesheet to the head
   const styleSheet = document.createElement("link");
   styleSheet.rel = "stylesheet";
   styleSheet.href =
-    "https://hull-city-council.github.io/gov-metric-web-component/src/style.css";
+    "//hull-city-council.github.io/gov-metric-web-component/src/style.css";
   document.head.append(styleSheet);
+
+  // Attach govmetric scripts
+  const gmScriptSideBar = document.createElement("script");
+  script.src = "//websurveys2.govmetric.com/js/client/gm_sidebar.js";
+  const gmHitCounter = document.createElement("script");
+  script.src = "//hitcounter.govmetric.com/2630";
+  document.head.append(gmScriptSideBar, gmHitCounter);
   return (
     <div class="feedback-wrapper">
       <h2 class="site-footer__text">How would you rate this page?</h2>
