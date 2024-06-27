@@ -8,9 +8,9 @@ const LoadGovMetric = ({ account }) => {
 
   // Attach govmetric scripts
   const gmScriptSideBar = document.createElement("script");
-  script.src = "//websurveys2.govmetric.com/js/client/gm_sidebar.js";
+  gmScriptSideBar.src = "//websurveys2.govmetric.com/js/client/gm_sidebar.js";
   const gmHitCounter = document.createElement("script");
-  script.src = "//hitcounter.govmetric.com/2630";
+  gmHitCounter.src = "//hitcounter.govmetric.com/2630";
   document.head.append(gmScriptSideBar, gmHitCounter);
   return (
     <div class="feedback-wrapper">
