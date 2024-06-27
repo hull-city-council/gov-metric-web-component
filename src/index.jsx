@@ -5,4 +5,4 @@ const govMetricRating = r2wc(LoadGovMetric, { props: { account: "string" } });
 
 customElements.define("gov-metric-rating", govMetricRating);
 const govMetricRatingElement = document.createElement("gov-metric-rating");
-document.getElementById("page-wrapper").appendChild(govMetricRatingElement);
+document.getElementById("main").appendChild(govMetricRatingElement);
