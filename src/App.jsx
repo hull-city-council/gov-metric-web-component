@@ -1,4 +1,10 @@
 const LoadGovMetric = ({ account }) => {
+  // Attach the stylesheet to the head
+  const styleSheet = document.createElement("link");
+  styleSheet.rel = "stylesheet";
+  styleSheet.href =
+    "https://hull-city-council.github.io/gov-metric-web-component/src/style.css";
+  document.head.append(styleSheet);
   return (
     <div class="feedback-wrapper">
       <h2 class="site-footer__text">How would you rate this page?</h2>
