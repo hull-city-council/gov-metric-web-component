@@ -14,12 +14,12 @@ const LoadGovMetric = ({ account }) => {
   gmHitCounter.src = "//hitcounter.govmetric.com/2630";
   document.head.append(gmScriptSideBar, gmHitCounter);
   return (
-    <div class="feedback-wrapper">
-      <h2 class="site-footer__text">How would you rate this page?</h2>
-      <ul class="list list--inline">
-        <li class="list__item page-rating">
+    <div className="feedback-wrapper">
+      <h2 className="site-rating__heading">How would you rate this page?</h2>
+      <ul className="feedback__list">
+        <li className="list__item_rating page-rating">
           <a
-            class="list__link gm_sidebar_anchor"
+            className="list__link gm_sidebar_anchor"
             title="rate this page as good"
             role="button"
             target="_blank"
@@ -31,16 +31,16 @@ const LoadGovMetric = ({ account }) => {
             }
           >
             <img
-              class="page-rating-smiley page-rating-smiley-good"
+              className="page-rating-smiley page-rating-smiley-good"
               alt="green smiley face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-green.svg"
             />
             Good
           </a>
         </li>
-        <li class="list__item page-rating">
+        <li className="list__item_rating page-rating">
           <a
-            class="list__link gm_sidebar_anchor"
+            className="list__link gm_sidebar_anchor"
             title="rate this page as average"
             role="button"
             target="_blank"
@@ -52,16 +52,16 @@ const LoadGovMetric = ({ account }) => {
             }
           >
             <img
-              class="page-rating-smiley"
+              className="page-rating-smiley"
               alt="green orange face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-orange.svg"
             />
             Average
           </a>
         </li>
-        <li class="list__item page-rating">
+        <li className="list__item_rating page-rating">
           <a
-            class="list__link gm_sidebar_anchor"
+            className="list__link gm_sidebar_anchor"
             title="rate this page as poor"
             role="button"
             target="_blank"
@@ -73,7 +73,7 @@ const LoadGovMetric = ({ account }) => {
             }
           >
             <img
-              class="page-rating-smiley"
+              className="page-rating-smiley"
               alt="green red face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-red.svg"
             />
