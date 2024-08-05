@@ -1,3 +1,4 @@
+import React from "react";
 const LoadGovMetric = ({ account }) => {
   // Attach the stylesheet to the head
   const styleSheet = document.createElement("link");
@@ -23,7 +24,11 @@ const LoadGovMetric = ({ account }) => {
             role="button"
             target="_blank"
             rel="nofollow"
-            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=3"
+            href={
+              "https://websurveys2.servmetric.com/theme/gm/" +
+              account +
+              "?GUID=53323c6e-949d-4bdf-87ad-fcf397e1d1c0&Q_RATINGID=3&pageNo=14810"
+            }
           >
             <img
               class="page-rating-smiley page-rating-smiley-good"
@@ -40,7 +45,11 @@ const LoadGovMetric = ({ account }) => {
             role="button"
             target="_blank"
             rel="nofollow"
-            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=2"
+            href={
+              "https://websurveys2.servmetric.com/theme/gm/" +
+              account +
+              "?GUID=53323c6e-949d-4bdf-87ad-fcf397e1d1c0&Q_RATINGID=2&pageNo=14810"
+            }
           >
             <img
               class="page-rating-smiley"
@@ -57,7 +66,11 @@ const LoadGovMetric = ({ account }) => {
             role="button"
             target="_blank"
             rel="nofollow"
-            href="https://websurveys.govmetric.com/theme/sm/2629?Q_RATINGID=4"
+            href={
+              "https://websurveys2.servmetric.com/theme/gm/" +
+              account +
+              "?GUID=53323c6e-949d-4bdf-87ad-fcf397e1d1c0&Q_RATINGID=4&pageNo=14810"
+            }
           >
             <img
               class="page-rating-smiley"

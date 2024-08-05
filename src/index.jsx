@@ -4,8 +4,11 @@ import LoadGovMetric from "./App";
 
 const govMetricRating = r2wc(LoadGovMetric, { props: { account: "string" } });
 
-// Define and append web component to the main element
+// Define and append web component to the main element depending on the theme used
+const mainElementsList = document.querySelectorAll("#content, #main");
+const mainsArray = [...mainElementsList];
 customElements.define("gov-metric-rating", govMetricRating);
-document
-  .getElementById("main")
-  .append(document.querySelector("gov-metric-rating"));
+
+mainsArray.forEach((element) => {
+  element.append(document.querySelector("gov-metric-rating"));
+});
