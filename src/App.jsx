@@ -20,7 +20,7 @@ const LoadGovMetric = ({ account }) => {
         <li className="list__item_rating page-rating">
           <a
             className="list__link gm_sidebar_anchor"
-            title="rate this page as good"
+            title="rate this page as good (opens in a new window)"
             role="button"
             target="_blank"
             rel="nofollow"
@@ -32,7 +32,7 @@ const LoadGovMetric = ({ account }) => {
           >
             <img
               className="page-rating-smiley page-rating-smiley-good"
-              alt="green smiley face"
+              alt="green face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-green.svg"
             />
             Good
@@ -41,7 +41,7 @@ const LoadGovMetric = ({ account }) => {
         <li className="list__item_rating page-rating">
           <a
             className="list__link gm_sidebar_anchor"
-            title="rate this page as average"
+            title="rate this page as average (opens in a new window)"
             role="button"
             target="_blank"
             rel="nofollow"
@@ -53,7 +53,7 @@ const LoadGovMetric = ({ account }) => {
           >
             <img
               className="page-rating-smiley"
-              alt="green orange face"
+              alt="orange face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-orange.svg"
             />
             Average
@@ -62,7 +62,7 @@ const LoadGovMetric = ({ account }) => {
         <li className="list__item_rating page-rating">
           <a
             className="list__link gm_sidebar_anchor"
-            title="rate this page as poor"
+            title="rate this page as poor (opens in a new window)"
             role="button"
             target="_blank"
             rel="nofollow"
@@ -74,7 +74,7 @@ const LoadGovMetric = ({ account }) => {
           >
             <img
               className="page-rating-smiley"
-              alt="green red face"
+              alt="red face"
               src="https://hull-city-council.github.io/gov-metric-web-component/public/smiley-dark-red.svg"
             />
             Poor
